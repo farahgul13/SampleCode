@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<!-- Three instance parallel run -->
+  <test thread-count="3" verbose="1" name="Test" parallel="methods" annotations="JDK">
+  <groups>	
+	<run>
+		<include name="Initialize" />
+		<include name="GroupOne" />
+		<exclude name="GroupTwo" />	
+    </run>	
+  </groups>	
+    <classes>
+    	<!--class name="example.TestGuru99MultipleSession"/-->
+      <class name="example.NewTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
